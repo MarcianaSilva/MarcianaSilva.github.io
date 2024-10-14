@@ -66,9 +66,10 @@ header {
 main {width: 100%;}
 
 .super-card {
-    width: 100%;
+    max-width: 960px; /* Define uma largura máxima */
+    margin: 20px auto; /* Centraliza o conteúdo */
     display: flex;
-    margin-top: 20px;
+    justify-content: center; /* Centraliza horizontalmente */
 }
 
 .super-card-img, 
@@ -79,6 +80,7 @@ main {width: 100%;}
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 400px;
 }
 
 .super-card-img h2 {margin-top: 20px;}
@@ -107,10 +109,11 @@ main {width: 100%;}
 
 .img-body,
 .img-body img {
-    width: 200px;
     display: table;
     margin: 0 auto; 
     border-radius: 50%;
+    width: 100%;
+    max-width: 200px; /* Limite de tamanho */
 }
 
 .card-body { padding: 1em; }
@@ -160,6 +163,17 @@ main {width: 100%;}
     margin-right: 10px;
     background-color: #141A28;
     border-radius: 5px;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .super-card {
+        flex-direction: column;
+    }
+    .super-card-text {
+        margin-left: 0;
+    }
 }
 .contact-link {color: #141A28;}
 
